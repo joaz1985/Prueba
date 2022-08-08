@@ -5,6 +5,5 @@
 
   tasks:
   name: Install OpenJDK
-     
-      java_packages:
-        - java-1.8.0-openjdk
+     yum:
+        name: java-1.8.0-openjdk
