@@ -3,14 +3,15 @@
   hosts: all
   become: true
 
+
+
   tasks:
-  - name: unarchive files
-  unarchive:
-    src: files.tar.gz
-    dest: "/tmp/{{ temp_home }}"
-    owner: "{{ default_user }}"
-    group: "{{ default_group }}"
-    extra_opts: [--strip-components=1]
+     - name: unarchive files  unarchive:
+     src: files.tar.gz
+     dest: "/tmp/{{ temp_home }}"
+     owner: "{{ default_user }}"
+     group: "{{ default_group }}"
+     extra_opts: [--strip-components=1]
  
 
   - name: download tomcat server packages
