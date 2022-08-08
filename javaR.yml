@@ -5,7 +5,5 @@
 
   tasks:
   name: Install OpenJDK
- java_packages: 
-   
-   
-  - java-1.8.0-openjdk
+     dnf:
+        name: java-1.8.0-openjdk
