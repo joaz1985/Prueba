@@ -1,0 +1,9 @@
+---
+- name: install Java
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Install OpenJDK
+    yum:
+      name: openjdk-11-jre-headless
