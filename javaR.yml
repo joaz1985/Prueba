@@ -4,6 +4,8 @@
   become: true
 
   tasks:
-  name: Install OpenJDK
-     dnf:
+  - name: Install OpenJDK
+
+    yum:
+
         name: java-1.8.0-openjdk
