@@ -1,6 +1,5 @@
 ---
-
- hosts: 192.168.56.107
+- hosts: server
   roles:
     - role: geerlingguy.java
       when: "ansible_os_family == 'RedHat'"
