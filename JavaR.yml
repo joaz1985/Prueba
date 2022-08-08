@@ -4,6 +4,8 @@
   become: true
 
   tasks:
-  - name: Install OpenJDK
-    yum:
-      name: openjdk-11-jre-headless
+
+java_jdk_type: 'openjdk'
+java_package: ''
+java_version: '8'
+java_set_as_default: false
