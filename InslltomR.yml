@@ -9,7 +9,7 @@
      - name: unarchive files  
      
         
-     unarchive:
+       - unarchive:
        src: files.tar.gz
        dest: "/tmp/{{ temp_home }}"
        owner: "{{ default_user }}"
