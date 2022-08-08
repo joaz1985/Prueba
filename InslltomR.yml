@@ -1,0 +1,18 @@
+---
+- name: install tomcat server
+  hosts: all
+  become: true
+
+- name: download tomcat server packages
+    get_url:
+      url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65.tar.gz
+      dest: /opt
+
+  - name: extract tomcat packages
+    unarchive:
+      src: /opt/apache-tomcat-9.0.65.tar.gz
+      dest: /opt
+      remote_src: yes
+
+  - name: start tomcat services
+    shell: nohup /opt/apache-tomcat-9.0.65/bin/startup.sh
